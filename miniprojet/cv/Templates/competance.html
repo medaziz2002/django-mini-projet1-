@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cv.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+    {% include 'index.html' %}
+   
+    <section>
+        <h2>Compétance Languistique</h2>
+        
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="row">ID</th>
+                    <td>COMPETANCE LANGUISTIQUE</td>
+                    
+                  </tr>
+            </thead>
+            <tbody>
+                {% for i in competance %}
+              <tr class="table-info">
+                
+                <th scope="row">{{i.id}}</th>
+                <td>{{i.competance_languistique}}</td>
+                
+              </tr>
+         {% endfor %}
+            </tbody>
+          </table>
+    </section>
+    <section>
+        <h2>Compétance Technique</h2>
+        
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <th scope="row">ID</th>
+                    <td>COMPETANCE TECHNIQUE</td>
+                    
+                  </tr>
+            </thead>
+            <tbody>
+                {% for i in competance %}
+              <tr class="table-info">
+                
+                <th scope="row">{{i.id}}</th>
+                <td>{{i.competance_technique}}</td>
+                
+              </tr>
+         {% endfor %}
+            </tbody>
+          </table>
+    </section>
+</body>
+
+</html>
